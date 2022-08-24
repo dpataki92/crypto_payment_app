@@ -2,15 +2,15 @@
 
 This application simulates a simple crypto payment transaction by implementing the following user flow:
 
-- The user can enter a `tx_hash` in the input field and initiate a payment by clicking on the "Make payment" button or pressing "Enter"
-- Once the payment is made and the app validated that it was made by a valid tx_hash, it goes through the confirmation process
-- If the confirmation was successful, the transaction details (e.g. value, transaction fee, etc.) are displayed in the UI enabling the user to review the payment
-- The user can also click on the "Check payments" button to review all the payments that were made in the same "session"
-- Once the first payment is successfully made, the total ETH value spent (including transaction value + transaction fee) is constantly displayed to the user
+- The user can enter a `tx_hash` in the input field and initiate a payment by clicking on the `Make payment` button or pressing `Enter`
+- Once the payment is made and the `tx_hash` was validated, the payment goes through the confirmation process
+- If the confirmation was successful (i.e. there are at least 2 block confirmations), the transaction details (e.g. value, transaction fee, etc.) get displayed in the UI enabling the user to review the payment
+- The user can also click on the `Check payments` button to review all the payments that were made in the same "session"
+- Once the first payment is successfully made, the total ETH value spent (including transaction value + transaction fee) is constantly updated and displayed to the user
 
-You can check behavior in this [demo video](https://drive.google.com/file/d/1GOfQ3sxf2_TBk2eh70kt55IKBvtNhYs8/view?usp=sharing).
+You can check the behavior in this [demo video](https://drive.google.com/file/d/1GOfQ3sxf2_TBk2eh70kt55IKBvtNhYs8/view?usp=sharing).
 
-The project was built with Elixir/Phoenix and React and utilizes the Etherscan API. 
+The project was built with `Elixir/Phoenix` and `JavaScript/React` and utilizes the `Etherscan API`. 
 
 # Usage
 
@@ -31,6 +31,7 @@ Strucure of the main files to review:
 
 ```
 crypto_payment_app
+|
 │   README.md   
 │
 └───assets
@@ -67,4 +68,18 @@ crypto_payment_app
     │   payment_helpers_test.ex
 ```
 
-# Explanation of changes
+# Explanation of implementation
+
+**General**
+
+The project was created with the `mix phx.new` command with the `no-ecto` flag. To follow a simple approach with React configuration, the frontend code was set up in the `assets` folder, a root element was added to the template and configuration code was added in `.babelrc` to handle `React` and `JSX`. 
+
+The frontend only utilizes `React` and `ReactDOM`. The backend uses `httpoison` dependecy to issue HTTP requests and `mox` for mocking requests. 
+
+**Payment flow**
+
+
+
+**Confirmation flow**
+
+
