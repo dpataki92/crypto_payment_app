@@ -18,6 +18,8 @@ defmodule CryptoPaymentAppWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    post "/make_payment", PaymentController, :make_payment
+    post "/confirm_payment", PaymentController, :confirm_payment
   end
 
   # Other scopes may use custom stacks.
