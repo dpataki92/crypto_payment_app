@@ -8,11 +8,16 @@ config :crypto_payment_app, CryptoPaymentAppWeb.Endpoint,
   server: false
 
 # In test we don't send emails.
-config :crypto_payment_app, CryptoPaymentApp.Mailer,
-  adapter: Swoosh.Adapters.Test
+config :crypto_payment_app, CryptoPaymentApp.Mailer, adapter: Swoosh.Adapters.Test
 
 # Print only warnings and errors during test
 config :logger, level: :warn
 
 # Initialize plugs at runtime for faster test compilation
 config :phoenix, :plug_init_mode, :runtime
+
+config :crypto_payment_app, :etherscan_client,
+  http_client: CryptoPaymentApp.HTTPClientMock,
+  url: "https://api.etherscan.io"
+
+import_config "dev.secret.exs"

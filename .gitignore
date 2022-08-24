@@ -32,3 +32,8 @@ crypto_payment_app-*.tar
 npm-debug.log
 /assets/node_modules/
 
+# Ignore sensitive configuration defined in dev.scret.exs
+**/*.secret.exs
+
+# Ignore node modules
+/node_modules

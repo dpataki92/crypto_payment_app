@@ -63,3 +63,9 @@ config :phoenix, :stacktrace_depth, 20
 
 # Initialize plugs at runtime for faster development compilation
 config :phoenix, :plug_init_mode, :runtime
+
+config :crypto_payment_app, :etherscan_client,
+  http_client: HTTPoison,
+  url: "https://api.etherscan.io"
+
+import_config "dev.secret.exs"

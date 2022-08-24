@@ -19,7 +19,7 @@ defmodule CryptoPaymentApp.MixProject do
   def application do
     [
       mod: {CryptoPaymentApp.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :httpoison],
     ]
   end
 
@@ -44,7 +44,9 @@ defmodule CryptoPaymentApp.MixProject do
       {:telemetry_poller, "~> 1.0"},
       {:gettext, "~> 0.18"},
       {:jason, "~> 1.2"},
-      {:plug_cowboy, "~> 2.5"}
+      {:plug_cowboy, "~> 2.5"},
+      {:httpoison, "~> 1.8"},
+      {:mox, "~> 1.0", only: [:dev, :test]},
     ]
   end
 
