@@ -49,6 +49,6 @@ window.liveSocket = liveSocket;
 
 import React from "react";
 import ReactDOM from "react-dom";
-import Main from "./main.jsx";
+import Main from "./Main.jsx";
 
 ReactDOM.render(<Main />, document.getElementById("root"));
