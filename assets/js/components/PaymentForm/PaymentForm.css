@@ -1,0 +1,29 @@
+.paymentFormWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 200px;
+  height: 400px;
+  opacity: 0.9999;
+  background-color: rgba(29, 31, 61, 0.2);
+}
+
+.title,
+.input {
+  color: white;
+}
+
+.form {
+  width: 500px;
+}
+
+.button {
+  background: #6932d4;
+  border: #6932d4;
+}
+
+.buttonWrapper {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,13 @@
+.totalSpendingWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.9999;
+  background-color: rgba(29, 31, 61, 0.2);
+  margin-top: 15px;
+  padding: 25px;
+}
+
+.totalValue {
+  color: #35c668;
+}

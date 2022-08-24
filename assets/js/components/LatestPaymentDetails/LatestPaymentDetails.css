@@ -1,0 +1,52 @@
+.paymentDetailsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0.9999;
+  background-color: rgba(29, 31, 61, 0.2);
+  margin-top: 15px;
+  padding: 25px;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.field {
+  color: #a9a9a9;
+}
+
+.status {
+  color: #35c668;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #6932d4;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+}
+
+.unprocessedPaymentWrapper {
+  color: white;
+  padding: 15px;
+}
+
+.failedPayment {
+  color: red;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

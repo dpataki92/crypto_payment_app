@@ -1,0 +1,21 @@
+.paymentsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 200px;
+  opacity: 0.9999;
+  background-color: rgba(29, 31, 61, 0.2);
+  overflow-y: auto;
+  height: calc(100% - 30px);
+  padding-bottom: 25px;
+}
+
+.paymentsRow {
+  width: 90%;
+}
+
+.closeButton {
+  cursor: pointer;
+  color: white;
+}
